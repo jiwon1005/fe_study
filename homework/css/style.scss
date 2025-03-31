@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+// https://github.com/orioncactus/pretendard
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+// @font-face {
+//     font-family: "pretendard";
+//     src: url() format ("woff");
+// }
+
+// color
+$black : #000000;
+$white : #ffffff;
+$gray-100 : #333333;
+$gray-200 : #666666;
+$gray-300 : #999999;
+$border : #eeeeee;
+$border-dark : #cccccc;
+$border-darker : #aaaaaa;
+$basic-bg : #f9f9f9;
+$gray-bg : #eeeeee;
+$primary : #3498DB;
+$secondary : #95A5A6;
+$success : #2ECC71;
+$danger : #E74C3C;
+$header-bg : #2c3e50;
+
+// mixin
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin left {
+    display: flex;
+    align-items: center;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+// setting
+*,
+*::before,
+*::after {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 16px;
+}
+
+body {
+    font-family: 'pretendard', sans-serif;
+    line-height: inherit;
+    color: $gray-100;
+    background-color: $basic-bg;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $header-bg;
+    color: $white;
+    padding: 20px;
+
+    ul {
+        display: flex;
+        gap: 24px;
+    }
+}
+
+#container {
+    @include column;
+    gap: 20px;
+    padding: 20px 20px;
+
+    .frame {
+        background-color: $white;
+        border: 1px solid $border-dark;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    // heading
+    #heading {
+        li {
+            @include left;
+            height: 60px;
+            border-bottom: 1px solid $border;
+
+            &:first-child {
+                border-top: 1px solid $border;
+            }
+        }
+    }
+
+    // button
+    #btn {
+        @include column;
+        gap: 20px;
+
+        .group-btn {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .btn {
+                @include center;
+                width: 160px;
+                height: 48px;
+                color: $white;
+                font-size: 1.125rem;
+                transition: linear 0.2s;
+
+                &:hover {
+                    transition: linear 0.2s;
+                }
+            }
+
+            .btn--default {
+                background-color: $primary;
+
+                &:hover {
+                    background-color: darken($color: $primary, $amount: 10%);
+                }
+            }
+
+            .btn--secondary {
+                background-color: $secondary;
+
+                &:hover {
+                    background-color: darken($color: $secondary, $amount: 10%);
+                }
+            }
+
+            .btn--success {
+                background-color: $success;
+
+                &:hover {
+                    background-color: darken($color: $success, $amount: 10%);
+                }
+            }
+
+            .btn--danger {
+                background-color: $danger;
+
+                &:hover {
+                    background-color: darken($color: $danger, $amount: 10%);
+                }
+            }
+        }
+    }
+
+    // card
+    #card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 480px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 20px 0px;
+            border-top: 1px solid $border;
+            border-bottom: 1px solid $border;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            img {
+                height: 240px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .btm {
+            display: flex;
+            justify-content: space-between;
+
+            .viewMore {
+                padding: 2px 8px;
+                background-color: $gray-bg;
+                border: 1px solid $border-darker;
+                border-radius: 2px;
+            }
+
+            p {
+                color: $gray-300;
+            }
+        }
+    }
+
+    // box
+    #box {
+        @include column;
+        gap: 20px;
+        text-align: center;
+
+        .group-box {
+            @include center;
+            gap: 40px;
+        }
+
+        .box {
+            @include center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid $border;
+        }
+
+        .area-img {
+            @include center;
+            width: 100%;
+            max-width: 300px;
+            min-width: 300px;
+            height: 200px;
+            color: $gray-200;
+            background-color: $gray-bg;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    #box {
+        .group-box {
+            flex-direction: column;
+
+            .box {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// dashboard
+#dashboard {
+    .wrap {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+
+        .navBar {
+            @include column;
+            gap: 20px;
+
+            li {
+                @include left;
+                height: 60px;
+                border-bottom: 1px solid $border;
+
+                &:first-child {
+                    border-top: 1px solid $border;
+                }
+
+                a {
+                    transition: linear 0.2s;
+
+                    &:hover {
+                        color: $primary;
+                        transition: linear 0.2s;
+                    }
+                }
+            }
+        }
+
+        .container {
+            @include column;
+            gap: 20px;
+
+            .section {
+                padding: 40px 20px;
+                background-color: $gray-bg;
+
+                p {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #dashboard {
+        .wrap {
+            grid-template-columns: 1fr;
+        }
+    }
+}
