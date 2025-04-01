@@ -45,11 +45,26 @@ button {
 }
 
 input {
-    border: inherit;
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 36px;
+}
+
+input[readonly] {
+    cursor: default;
 }
 
 input:focus {
     outline: none;
+    border: 1px solid #3498DB;
+}
+
+input[readonly]:focus {
+    border: 1px solid #ddd;
 }
 
 select {
@@ -107,21 +122,6 @@ header .add {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.todo-list li input {
-    box-sizing: border-box;
-    padding: 8px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    height: 36px;
-}
-
-.todo-list li input:focus {
-    border: 1px solid #3498DB;
-    box-sizing: border-box;
 }
 
 .group-btn {

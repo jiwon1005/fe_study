@@ -50,7 +50,6 @@ textarea {
     box-sizing: border-box;
     padding: 8px;
     background-color: #fff;
-    /* border: inherit; */
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 100%;
@@ -62,6 +61,14 @@ textarea:focus {
     outline: none;
     border: 1px solid #3498DB;
     box-sizing: border-box;
+}
+
+input[readonly] {
+    cursor: default;
+}
+
+input[readonly]:focus {
+    border: 1px solid #ddd;
 }
 
 select {
