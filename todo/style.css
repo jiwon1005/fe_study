@@ -97,9 +97,9 @@ header h1 {
     color: #fff;
 }
 
-header button svg {
+/* header button svg {
     color: #333;
-}
+} */
 
 header .add {
     color: #fff;
@@ -126,6 +126,10 @@ header .add {
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.todo-list li input {
+    cursor: pointer;
 }
 
 .group-btn {
