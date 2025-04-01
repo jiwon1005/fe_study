@@ -105,6 +105,17 @@ header h1 {
     transform: translateX(-50%);
 }
 
+header button svg {
+    color: #333;
+}
+
+header .delete {
+    font-size: 0.875rem;
+    font-weight: 600;
+    /* color: #E74C3C; */
+    color: #666;
+}
+
 #wrap {
     background-color: #f9f9f9;
     height: 100vh;
@@ -148,4 +159,37 @@ header h1 {
     background-color: #3498DB;
     position: relative;
     align-items: center;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.group-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.group-btn button {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-btn svg {
+    width: 16px;
+    color: #fff;
 }

@@ -97,6 +97,10 @@ header h1 {
     color: #fff;
 }
 
+header button svg {
+    color: #333;
+}
+
 header .add {
     color: #fff;
 }
