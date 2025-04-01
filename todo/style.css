@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'pretendard', sans-serif;
+    line-height: inherit;
+    background-color: #fff;
+    outline: 1px solid #eee;
+    border-top: inherit;
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+input {
+    border: inherit;
+}
+
+input:focus {
+    outline: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+header .regi {
+    color: #fff;
+}
+
+#wrap {
+    background-color: #f9f9f9;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+svg {
+    width: 20px;
+}
+
+select {
+    width: 80px;
+    padding: 4px;
+    border: inherit;
+    background-color: inherit;
+    margin-left: auto;
+    outline: none;;
+}
+
+select:focus {
+    outline: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+ul li input {
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 36px;
+}
+
+ul li input:focus {
+    border: 1px solid #3498DB;
+    box-sizing: border-box;
+}
+
+.group-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.group-btn button {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-btn svg {
+    width: 16px;
+    color: #fff;
+}
