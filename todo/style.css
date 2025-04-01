@@ -53,6 +53,23 @@ input:focus {
     outline: none;
 }
 
+svg {
+    width: 20px;
+}
+
+select {
+    width: 80px;
+    padding: 4px;
+    border: inherit;
+    background-color: inherit;
+    margin-left: auto;
+    outline: none;;
+}
+
+select:focus {
+    outline: none;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -83,36 +100,19 @@ header .regi {
     gap: 20px;
 }
 
-svg {
-    width: 20px;
-}
-
-select {
-    width: 80px;
-    padding: 4px;
-    border: inherit;
-    background-color: inherit;
-    margin-left: auto;
-    outline: none;;
-}
-
-select:focus {
-    outline: none;
-}
-
-ul {
+.regi-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-ul li {
+.regi-list li {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-ul li input {
+.regi-list li input {
     box-sizing: border-box;
     padding: 8px;
     background-color: #fff;
@@ -122,7 +122,7 @@ ul li input {
     height: 36px;
 }
 
-ul li input:focus {
+.regi-list li input:focus {
     border: 1px solid #3498DB;
     box-sizing: border-box;
 }
