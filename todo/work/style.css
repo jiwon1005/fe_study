@@ -18,6 +18,7 @@ body {
     font-family: 'pretendard', sans-serif;
     line-height: inherit;
     background-color: #fff;
+    outline: 1px solid #eee;
     border-top: inherit;
     height: 100vh;
     max-width: 600px;
@@ -44,18 +45,29 @@ button {
     cursor: pointer;
 }
 
-input {
-    border: inherit;
+input,
+textarea {
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #fff;
+    /* border: inherit; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 36px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: none;
+    border: 1px solid #3498DB;
+    box-sizing: border-box;
 }
 
 select {
     width: 80px;
     padding: 4px;
-    border: transparent;
+    border: inherit;
     background-color: inherit;
     margin-left: auto;
     outline: none;
@@ -68,7 +80,9 @@ select:focus {
 header {
     position: sticky;
     top: 0;
-    background-color: #333;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    color: #333;
     height: 48px;
     display: flex;
     justify-content: space-between;
@@ -79,68 +93,52 @@ header {
 
 header h1 {
     font-size: 1.125rem;
-    color: #fff;
-}
-
-header .add {
-    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #wrap {
     background-color: #f9f9f9;
-    height: 100%;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
+    height: 100vh;
+    overflow-y: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.todo-list {
+.li {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-.todo-list li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.todo-list li input {
-    box-sizing: border-box;
-    padding: 8px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    height: 36px;
-}
-
-.todo-list li input:focus {
-    border: 1px solid #3498DB;
-    box-sizing: border-box;
-}
-
-.group-btn {
-    display: flex;
-    flex-direction: row;
     gap: 8px;
 }
 
-.group-btn button {
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.li textarea {
+    height: 120px;
 }
 
-.group-btn svg {
-    width: 16px;
+.btm-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 560px;
+}
+
+.btm-btn .done {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
     color: #fff;
+    background-color: #3498DB;
+    position: relative;
+    align-items: center;
 }
