@@ -13,4 +13,5 @@ function createTodo() {
 
     todoList.appendChild(newTodo)
 
+    todoInput.value = ''
 }
