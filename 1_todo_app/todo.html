@@ -10,6 +10,7 @@
 <body>
 
     <div class="container">
+
         <h1 class="title">To-Do App</h1>
         <div class="add-form">
             <input id="todo-input" type="text" placeholder="할 일을 입력하세요">
@@ -17,7 +18,17 @@
         </div>
 
         <ul id="todo-list">
+            <li><input type="checkbox" onchange="toggleComplete(this)">
+                <div>
+                    <span class="todo-text">내용이 들어갈 자리</span>
+                    <span>
+                        <button class="btn edit-btn" onclick="editItem(this)">수정</button>
+                        <button class="btn delete-btn" onclick="deleteItem(this)">삭제</button>
+                    </span>
+                </div>
+            </li>
         </ul>
+
     </div>
 
 </body>
