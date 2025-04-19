@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,17 @@
 </head>
 
 <body>
-
     <div class="container">
-
         <h1 class="title">To-Do App</h1>
+
         <div class="add-form">
-            <input id="todo-input" type="text" placeholder="할 일을 입력하세요">
-            <button id="todo-add-btn" class="btn" onclick="createTodo()">추가</button>
+            <input id="todo-input" type="text" placeholder="할 일을 입력하세요" />
+            <button id="todo-add-btn" class="btn" onclick="addTodo()">추가</button>
         </div>
 
         <ul id="todo-list">
-            <!-- <li><input type="checkbox" onchange="toggleComplete(this)">
+            <!-- <li>
+                <input type="checkbox" onchange="toggleComplete(this)" />
                 <div>
                     <span class="todo-text">내용이 들어갈 자리</span>
                     <span>
@@ -28,10 +29,9 @@
                 </div>
             </li> -->
         </ul>
-
     </div>
-
 </body>
 
 <script src="./todo.js"></script>
+
 </html>
